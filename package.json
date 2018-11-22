@@ -4,7 +4,8 @@
   "description": "Custom Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack-dev-server --inline --progress --port 8081 --config webpack.config.dev.js"
   },
   "author": "Colin Ronayne",
   "license": "ISC",
@@ -26,6 +27,7 @@
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
+    "@ngtools/webpack": "^7.0.6",
     "angular-router-loader": "^0.8.5",
     "angular2-template-loader": "^0.6.2",
     "awesome-typescript-loader": "^5.2.1",
@@ -35,6 +37,7 @@
     "raw-loader": "^0.5.1",
     "typescript": "^3.1.6",
     "webpack": "^4.26.0",
+    "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10",
     "webpack-merge": "^4.1.4"
   }
