@@ -5,7 +5,7 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.ts']
     },
-    modules: {
+    module: {
         rules: [
             {
                 test: /\.html$/,

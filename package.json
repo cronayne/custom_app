@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack-dev-server --inline --progress --port 8081 --config webpack.config.dev.js"
+    "build": "webpack-dev-server --inline --progress --port 8082 --config webpack.config.dev.js",
+    "build:prod": "del-cli dist && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli 'src/app/**/*.js' 'src/app/**/*.ngfactory.ts' 'src/app/**/*.ngfactory.js' 'src/app/**/*.js.map' 'src/app/**/*.shim.ts' 'src/app/**/*.ngsummary.json' 'src/app/**/*.ngstyle.ts' 'dist/app' 'src/polyfills.ngsummary.json'"
   },
   "author": "Colin Ronayne",
   "license": "ISC",
@@ -28,6 +29,8 @@
   },
   "devDependencies": {
     "@ngtools/webpack": "^7.0.6",
+    "@types/core-js": "^2.5.0",
+    "@types/node": "^10.12.10",
     "angular-router-loader": "^0.8.5",
     "angular2-template-loader": "^0.6.2",
     "awesome-typescript-loader": "^5.2.1",
